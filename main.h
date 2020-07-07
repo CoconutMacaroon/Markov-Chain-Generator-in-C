@@ -4,5 +4,6 @@
 #include <string.h>
 #include <ctype.h>
 // define constants
-#define word "hello"
-#define file "output.txt"
+
+#define WORD "hello"
+#define INPUT_FILE "output.txt"

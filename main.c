@@ -5,7 +5,7 @@ int main() {
     FILE *fp;
     long lSize;
     char *data;
-    fp = fopen(file, "r");
+    fp = fopen(INPUT_FILE, "r");
     if (!fp) perror("blah.txt"), exit(1);
     fseek(fp, 0L, SEEK_END);
     lSize = ftell(fp);
@@ -39,13 +39,13 @@ int main() {
     /*
      * char possibleWords[][]  // make a string array of the words that come after the current word.
      * for(word_index in data) {
-     *     if(word==currentWord) {
+     *     if(WORD==currentWord) {
      *          possibleWords.append(data[word_index + 1]);}
      *
      * get the string that occurs most in possibleWords, and print it to the screen
      *
      * */
-    // TODO: This prints all items to the screen, but I would rather have it in a 2D char array. How would this work? The code should generate something somewhat like this: char myArray[][] = ["hi", "how", "are", "you"... ]; Rather than using printf, in Python I would append it to the array, but I don't think C arrays can change size (so you can't append things to them. I think you can recreate it with a diffrent size, but doing that for every char in a 10+ MB file would be absurd. I kinda want to use a vector, because it can, but I haven't used them before and I think they are only in C++ ?
+    // TODO: This prints all items to the screen, but I would rather have it in a 2D char array. How would this work? The code should generate something somewhat like this: char myArray[][] = ["hi", "how", "are", "you"... ]; Rather than using printf, in Python I would append it to the array, but I don't think C arrays can change size (so you can't append things to them. I think you can recreate it with a different size, but doing that for every char in a 10+ MB file would be absurd. I kinda want to use a vector, because it can, but I haven't used them before and I think they are only in C++ ?
 
 
     // close file handel and release memory
